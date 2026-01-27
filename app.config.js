@@ -133,6 +133,9 @@ export default {
       city: cityId,
       cityName: cityConfig.name,
       cityNameJa: cityConfig.nameJa,
+      eas: {
+          projectId: "be8cf4b8-2805-49b0-bf67-c791a8dfcf52",
+      },
     },
 
     ios: {
