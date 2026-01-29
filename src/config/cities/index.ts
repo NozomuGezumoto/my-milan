@@ -7,6 +7,7 @@ export { sydneyConfig } from './sydney';
 export { parisConfig } from './paris';
 export { londonConfig } from './london';
 export { romeConfig } from './rome';
+export { milanConfig } from './milan';
 export { bangkokConfig } from './bangkok';
 export { kuantanConfig } from './kuantan';
 export { tokyoConfig } from './tokyo';
@@ -21,6 +22,7 @@ import { sydneyConfig } from './sydney';
 import { parisConfig } from './paris';
 import { londonConfig } from './london';
 import { romeConfig } from './rome';
+import { milanConfig } from './milan';
 import { bangkokConfig } from './bangkok';
 import { kuantanConfig } from './kuantan';
 import { tokyoConfig } from './tokyo';
@@ -38,6 +40,7 @@ export const CITIES: Record<CityId, CityConfig> = {
   paris: parisConfig,
   london: londonConfig,
   rome: romeConfig,
+  milan: milanConfig,
   bangkok: bangkokConfig,
   kuantan: kuantanConfig,
   tokyo: tokyoConfig,
@@ -55,4 +58,5 @@ export const CITY_LIST: CityConfig[] = Object.values(CITIES);
 export function getCityConfig(cityId: string): CityConfig {
   return CITIES[cityId as CityId] || kyotoConfig;
 }
+
 

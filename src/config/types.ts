@@ -8,6 +8,7 @@ export type CityId =
   | 'paris'
   | 'london'
   | 'rome'
+  | 'milan'
   | 'bangkok'
   | 'kuantan'
   | 'tokyo'
