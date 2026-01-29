@@ -121,7 +121,7 @@ export default {
   expo: {
     name: cityConfig.name,
     slug: cityConfig.slug,
-    version: '1.0.0',
+    version: '1.0.1',
     orientation: 'portrait',
     icon: './assets/images/icon.png',
     scheme: cityConfig.scheme,
@@ -141,16 +141,14 @@ export default {
     ios: {
       supportsTablet: true,
       bundleIdentifier: `com.mycity.${cityConfig.slug.replace(/-/g, '')}`,
-
-    infoPlist: {
+      buildNumber: "2", // ← 提出のたびに増やす（前回が1なら2）
+      infoPlist: {
       NSLocationWhenInUseUsageDescription:
-        'Your location is used to record places you have visited in Kyoto on the map, so you can save personal travel memories at the exact locations you explored.',
+      `Your location is used to save your visited places on the map (for example, to place a pin at your current location).`,
       NSPhotoLibraryUsageDescription:
-        'Your photo library is used to select photos and attach them to your saved memories.',
-               },
-    },
-
-
+      'Your photo library is used to select photos and attach them to your saved memories.',
+  },
+},
 
     android: {
       package: `com.mycity.${cityConfig.slug.replace(/-/g, '')}`,
