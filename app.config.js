@@ -141,7 +141,7 @@ export default {
 
     infoPlist: {
       NSLocationWhenInUseUsageDescription:
-        'Your location is used to show your position on the map and help you place pins where you visited.',
+        'Your location is used to record places you have visited in Kyoto on the map, so you can save personal travel memories at the exact locations you explored.',
       NSPhotoLibraryUsageDescription:
         'Your photo library is used to select photos and attach them to your saved memories.',
                },
