@@ -8,7 +8,7 @@ import { CityConfig, CityId } from './types';
 import { CITIES, getCityConfig, CITY_LIST } from './cities';
 
 // Get city from Expo config extra (set via app.config.js)
-const cityId: CityId = (Constants.expoConfig?.extra?.city as CityId) || 'kyoto';
+const cityId: CityId = (Constants.expoConfig?.extra?.city as CityId) || 'milan';
 
 // Active city configuration
 export const CITY_CONFIG: CityConfig = getCityConfig(cityId);

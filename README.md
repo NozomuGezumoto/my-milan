@@ -19,6 +19,7 @@ A beautiful memory pin map app for your favorite cities. Drop pins on the map to
 | ベルリン (Berlin) | 🐻 | Germany |
 | リオ (Rio de Janeiro) | 🎭 | Brazil |
 | マラケシュ (Marrakech) | 🕌 | Morocco |
+| ミラノ (Milan) | 👗 | Italy |
 
 ## Features
 
@@ -65,6 +66,7 @@ npm run start:barcelona
 npm run start:berlin
 npm run start:rio
 npm run start:marrakech
+npm run start:milan
 ```
 
 ### 3. Run on your device
@@ -81,6 +83,9 @@ Use one of the following:
 ```bash
 # Build Kyoto version
 npm run build:kyoto
+
+# Build Milan version
+npm run build:milan
 
 # Build Paris version
 npm run build:paris

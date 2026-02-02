@@ -109,11 +109,19 @@ const CITY_APP_CONFIG = {
     backgroundColor: '#fef7ed',
     emoji: '🕌',
   },
+  milan: {
+    name: 'My Milan',
+    nameJa: 'My ミラノ',
+    slug: 'my-milan',
+    scheme: 'mymilan',
+    backgroundColor: '#fafafa',
+    emoji: '👗',
+  },
 };
 
-// Get city from environment variable (default: kyoto)
-const cityId = process.env.CITY || 'kyoto';
-const cityConfig = CITY_APP_CONFIG[cityId] || CITY_APP_CONFIG.kyoto;
+// Get city from environment variable (default: milan)
+const cityId = process.env.CITY || 'milan';
+const cityConfig = CITY_APP_CONFIG[cityId] || CITY_APP_CONFIG.milan;
 
 console.log(`📍 Building for: ${cityConfig.name} ${cityConfig.emoji}`);
 

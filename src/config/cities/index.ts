@@ -56,7 +56,7 @@ export const CITY_LIST: CityConfig[] = Object.values(CITIES);
 
 // Get city by ID (with fallback)
 export function getCityConfig(cityId: string): CityConfig {
-  return CITIES[cityId as CityId] || kyotoConfig;
+  return CITIES[cityId as CityId] || milanConfig;
 }
 
 
