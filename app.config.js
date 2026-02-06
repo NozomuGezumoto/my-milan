@@ -12,6 +12,7 @@ const CITY_APP_CONFIG = {
     scheme: 'mykyoto',
     backgroundColor: '#faf8f5',
     emoji: '⛩️',
+    easProjectId: 'be8cf4b8-2805-49b0-bf67-c791a8dfcf52',
   },
   sydney: {
     name: 'My Sydney',
@@ -116,6 +117,7 @@ const CITY_APP_CONFIG = {
     scheme: 'mymilan',
     backgroundColor: '#fafafa',
     emoji: '👗',
+    easProjectId: '0a6e107a-d302-4071-94e9-a81cea23c604',
   },
 };
 
@@ -129,7 +131,7 @@ export default {
   expo: {
     name: cityConfig.name,
     slug: cityConfig.slug,
-    version: '1.0.1',
+    version: '1.0.2',
     orientation: 'portrait',
     icon: './assets/images/icon.png',
     scheme: cityConfig.scheme,
@@ -141,15 +143,18 @@ export default {
       city: cityId,
       cityName: cityConfig.name,
       cityNameJa: cityConfig.nameJa,
-      eas: {
-          projectId: "be8cf4b8-2805-49b0-bf67-c791a8dfcf52",
-      },
+      // EAS projectId will be auto-generated if not set
+      ...(cityConfig.easProjectId && {
+        eas: {
+          projectId: cityConfig.easProjectId,
+        },
+      }),
     },
 
     ios: {
       supportsTablet: true,
       bundleIdentifier: `com.mycity.${cityConfig.slug.replace(/-/g, '')}`,
-      buildNumber: "2", // ← 提出のたびに増やす（前回が1なら2）
+      buildNumber: "3", // ← 提出のたびに増やす（前回が1なら2）
       infoPlist: {
       NSLocationWhenInUseUsageDescription:
       `Your location is used to save your visited places on the map (for example, to place a pin at your current location).`,
